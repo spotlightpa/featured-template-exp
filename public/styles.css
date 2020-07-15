@@ -32,8 +32,15 @@ ul li{
 }
 
 .global__nav{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top:1rem;
   position:absolute;
   top:0;
+  z-index: 1001;
+}
+.global__nav .spotlight__logo{
+  height:40px;
 }
 .input__combo{
   display: flex;
@@ -62,6 +69,9 @@ div.section__divider hr{
   width:50px;
   text-align: left;
   margin-left: 0;
+}
+.aside__left, .aside__right{
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Spotlight Branded Elements */
@@ -275,6 +285,12 @@ p.large__text{
 }
 
 @media (min-width: 768px) {
+  .feature__hero__title{
+    padding-top: 4rem;
+  }
+  .input__combo input, .input__combo .btn{
+    height:40px;
+  }
   .feature__hero{
     display:grid;
     grid-template-columns: 2fr 3fr;
@@ -308,7 +324,7 @@ p.large__text{
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .feature__hero{
     min-height:800px;
   }
@@ -320,8 +336,8 @@ p.large__text{
     height:100%;
   }
   .feature__hero__text{
+    margin-left: 3rem;
     position:absolute;
-    right:15%;
     bottom:10%;
     width:70%;
   }
@@ -346,7 +362,6 @@ p.large__text{
   }
   .aside__left, .aside__right{
     width:300px;
-    font-family: 'Open Sans', sans-serif;
   }
   .aside__right{
     float:right;
@@ -358,7 +373,7 @@ p.large__text{
     float:left;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .feature__hero__text{
     width:60%;
   }
