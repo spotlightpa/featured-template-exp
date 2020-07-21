@@ -417,7 +417,7 @@ p.large__text{
     width:70%;
   }
   .feature__hero h1{
-    font-size: 4em;
+    font-size: 3.8em;
   }
   .feature__hero h6{
     font-size: 1.3em;
@@ -467,7 +467,7 @@ p.large__text{
     width:60%;
   }
   .feature__hero h1{
-    font-size: 4.8em;
+    /*font-size: 4.4em;*/
   }
   .feature__hero h6{
     font-size: 1.3em;
