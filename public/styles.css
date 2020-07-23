@@ -117,6 +117,7 @@ div.section__divider hr{
   border-width: 0;
   height: 6px;
   margin-bottom: 1rem;
+  margin-top: 4rem;
   width:50px;
   text-align: left;
   margin-left: 0;
@@ -253,7 +254,7 @@ div.section__divider hr{
   padding-left:2rem;
   padding-right:2rem;
 }
-.article__body p, .article__body h3, div.section__divider, .photo__container__inline, .dataviz__container__inline, .photo__container .photo__caption, .feature__credits, .spotlight__tout__block, .feature__dataviz__container, .aside__supplement{
+.article__body p, .article__body h3, div.section__divider, .photo__container__inline, .dataviz__container__inline, .photo__container .photo__caption, .feature__credits, .spotlight__tout__block, .feature__dataviz__container, .aside__supplement, .pull__quote__block{
   max-width: 730px;
   margin-left: auto;
   margin-right: auto;
@@ -293,6 +294,21 @@ p.large__text{
   width:50px;
   text-align: left;
   margin-left: 0;
+}
+
+/* Pull quote  */
+.pull__quote__block{
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding-left: 4rem;
+  background-image: url('./img/quote__graphic.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pull__quote__block span{
+  font-size: 2rem;
+  line-height: 1.3em;
 }
 
 /* Feature Credits */
