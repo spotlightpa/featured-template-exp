@@ -47,12 +47,13 @@ ul.list_unstyled li{
     filter: grayscale(1)
 }
 .global__nav{
-  padding-left: 3rem;
-  padding-right: 3rem;
   padding-top:1rem;
   position:absolute;
   top:0;
+  width:100%;
   z-index: 1001;
+  display:flex;
+  justify-content: center;
 }
 .global__nav .spotlight__logo{
   height:40px;
@@ -384,10 +385,17 @@ p.large__text{
 
 @media (min-width: 768px) {
   .feature__hero__title{
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
   .input__combo input, .input__combo .btn{
     height:40px;
+  }
+  .global__nav{
+    justify-content: flex-start;
+  }
+  .global__nav__content{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .feature__hero{
     display:grid;
@@ -418,7 +426,7 @@ p.large__text{
 
 @media (min-width: 992px) {
   .feature__hero h1{
-    font-size: 3.2em;
+    font-size: 2.4rem;
   }
 }
 
@@ -438,18 +446,16 @@ p.large__text{
     align-items: flex-end;
   }
   .feature__hero__text{
-    margin-left: 3rem;
-    margin-bottom: 4rem;
     align-self: flex-end;
   }
   .feature__hero h1{
-    font-size: 3.8em;
+    font-size: 3.4em;
   }
   .feature__hero h6{
     font-size: 1.3em;
   }
   .feature__headline{
-    padding-bottom: 60px;
+    padding-bottom: 48px;
     padding-top: 48px;
     margin-bottom:3rem;
   }
@@ -490,14 +496,14 @@ p.large__text{
 }
 @media (min-width: 1800px) {
   .feature__hero__text{
-    width:60%;
-    margin-top: 8rem;
+    width:70%;
+    margin-top: 3rem;
   }
   .feature__hero h1{
-    font-size: 4.4em;
+    /*font-size: 3.4rem;*/
   }
   .feature__hero h6{
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
 
 }
