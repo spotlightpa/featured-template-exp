@@ -37,6 +37,9 @@ ul.list_unstyled li{
 .text__yellow{
   color: #ffcb05;
 }
+.font__bold{
+  font-weight: 700;
+}
 .eyebrow{
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
