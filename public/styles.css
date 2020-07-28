@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
 
 html, body{
     font-family: 'Merriweather', serif;
@@ -151,16 +151,18 @@ div.section__divider hr{
 }
 
 /* Spotlight Branded Elements */
-.spotlight__tout{
+.spotlight__tout, .spotlight__sticker__tout{
   background-color: #000;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
+}
+.spotlight__tout{
   padding-bottom: 2rem;
   padding-top: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
 }
-.spotlight__tout h6{
+.spotlight__tout h6, .spotlight__sticker__tout h6{
   font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -173,18 +175,41 @@ div.section__divider hr{
   margin-top: 3rem;
   text-align: center;
 }
-.spotlight__tout .btn{
+.spotlight__tout .btn, .spotlight__sticker__tout .btn{
   border:0;
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
   padding: .5rem 2rem;
 }
-.spotlight__tout .btn__yellow{
+.spotlight__tout .btn__yellow, .spotlight__sticker__tout .btn__yellow{
   background-color: #ffcb05;
   color:#000;
+  font-weight: 800;
 }
-
+.window-sticker .close-btn{
+  z-index:50;
+}
+a.window-sticker-content{
+  text-decoration: none;
+}
+.spotlight__sticker__tout{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  line-height: normal;
+}
+.spotlight__sticker__tout p{
+  margin-bottom:1rem;
+}
+.spotlight__sticker__tout .btn{
+  padding-top:.5rem;
+  padding-bottom:.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
 /* Feature Page Hero */
 .feature__hero{
   display:flex;
@@ -510,6 +535,9 @@ p.large__text{
   .global__footer__link__column:nth-of-type(1) { order: 1; }
   .global__footer__link__column:nth-of-type(2) { order: 2; }
   .global__footer__link__column:nth-of-type(3) { order: 3; }
+  .spotlight__sticker__tout{
+    width:400px;
+  }
 }
 @media (min-width: 1800px) {
   .feature__hero__text{
