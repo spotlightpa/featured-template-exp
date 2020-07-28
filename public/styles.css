@@ -46,6 +46,9 @@ ul.list_unstyled li{
     -webkit-filter: grayscale(1);
     filter: grayscale(1)
 }
+.hide__mobile{
+  display: none;
+}
 .global__nav{
   padding-top:1rem;
   position:absolute;
@@ -425,7 +428,6 @@ p.large__text{
     flex: 1;
   }
   .feature__credits .credits__branding{
-
     flex: 1;
   }
 }
@@ -439,6 +441,9 @@ p.large__text{
 @media (min-width: 1300px) {
   .aside__supplement hr{
     display: none;
+  }
+  .hide__mobile{
+    display:inherit;
   }
   .aside__supplement{
     margin-bottom: 1rem;
