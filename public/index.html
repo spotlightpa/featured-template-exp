@@ -34,6 +34,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="reset.css" />
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="slide-in.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.5.0/dist/alpine.min.js" defer></script>
 </head>
 <body class="feature">
 
@@ -73,6 +75,10 @@
       <p class="large__text">
         Her first month on campus, in 2017, an <a href="https://thehawkeyeonlinenews.wordpress.com/2017/09/11/another-racist-snapchat-stirs-iup-campus/">image of a fellow student’s Snapchat emerged</a>, showing a burnt sandwich with the caption, “How do you like your grilled cheese? The same as my slaves.” This past September, a video shared dozens of times on social media captured a student <a href="https://pittsburgh.cbslocal.com/2019/09/08/iup-student-racist-remarks/">using racial slurs and threatening violence</a> against students of color.
       </p>
+      <div
+         x-data="spl.intersector('open-sticky')"
+         x-init="init()"
+      ></div>
       <p>
         Then there was more subtle racism, Bailor said, such as professors discouraging her from taking the same number of science and math classes as others because she wouldn’t succeed. When she raised concerns about discrimination, an advisor lectured her on learning to work in a professional environment, even though she’s been a registered nurse aide since age 17.
       </p>
@@ -592,5 +598,43 @@
       </div>
   </footer>
 
+  <section
+    class="window-sticker"
+    :class="stickyClass"
+    x-data="spl.sticky()"
+    x-init="init()"
+    x-show="isOpen"
+    x-transition:enter="slide-left-enter-active"
+    x-transition:enter-start="slide-left-enter"
+    x-transition:leave="slide-left-enter-active is-active"
+    x-transition:leave-end="slide-left-enter"
+    @open-sticky.window="show()"
+  >
+    <div class="window-sticker-grid">
+      <button
+        type="button"
+        class="close-btn"
+        aria-label="close"
+        @click="close"
+        x-ref="close"
+        tabindex="-1"
+      >
+        <i class="far fa-times fa-2x"></i>
+      </button>
+      <a
+        class="window-sticker-content"
+        @click.capture="analytics($event)"
+        href="/donate/"
+      >
+        <div class="spotlight__tout spotlight__tout__block">
+          <div class="text__yellow">Donate</div>
+          <div>
+            Spotlight PA provides essential, public-service journalism thanks to readers like you. Help us continue to cover the state’s response to the coronavirus pandemic.
+          </div>
+          <button class="btn btn__yellow">Yes, I want to help</button>
+        </div>
+      </a>
+    </div>
+  </section>
 </body>
 </html>
