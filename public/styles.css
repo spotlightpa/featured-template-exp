@@ -122,15 +122,45 @@ p.drop__cap:first-letter{
 .global__footer__link__column:nth-of-type(3) { order: 4; }
 .input__combo{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
-.input__combo input{
-  width:50%;
-  padding:0 8px;
+.input__combo input[type=email]{
+  padding-bottom: calc(0.375em - 1px);
+  padding-top: calc(0.375em - 1px);
+  padding-right: 2.25em;
+  padding-left: 2.25em;
+  display: inline-flex;
+  box-sizing: inherit;
+  font-size: 1.25rem;
+  color:rgb(219, 219, 219);
+  border: 0;
+}
+.form__field p{
+  box-sizing: border-box;
+  margin-bottom: 0 !important;
+  position: relative;
+}
+.form__field .icon{
+  position: absolute;
+  height:2.25rem;
+  top:0;
+  width:2.25rem;
+  z-index: 4;
+  color:rgb(219, 219, 219);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+.icon.is_left{
+  left:0;
 }
 .input__combo input, .input__combo .btn{
-  height:40px;
+  height:2.25rem;
+  display: block;
+  width:100%;
+  max-width: 100%;
+}
+.input__combo .btn{
+  line-height: 1;
 }
 /* Feature Page Elements */
 .feature h4{
@@ -160,7 +190,27 @@ div.section__divider hr{
 .aside__left, .aside__right{
   font-family: 'Open Sans', sans-serif;
 }
-
+.aside__keypoints{
+  background-image: url('./img/icon__key__graphic.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 150px;
+}
+.aside__keypoints.aside__right{
+  border-left: none;
+}
+.aside__info{
+  background-image: url('./img/icon__info__graphic.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 150px;
+}
+.aside__info.aside__left{
+  border-right: none;
+}
+.aside__info.aside__right{
+  border-left: none;
+}
 /* Spotlight Branded Elements */
 .spotlight__tout, .spotlight__sticker__tout{
   background-color: #000;
@@ -171,8 +221,8 @@ div.section__divider hr{
 .spotlight__tout{
   padding-bottom: 2rem;
   padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .spotlight__tout h6, .spotlight__sticker__tout h6{
   font-size: .8rem;
@@ -354,14 +404,14 @@ a.window-sticker-content{
 .pull__quote__block{
   margin-bottom: 3rem;
   margin-top: 3rem;
-  padding-left: 4rem;
+  padding-left: 2rem;
   background-image: url('./img/quote__graphic.png');
-  background-position: left;
+  background-position: top left;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100px;
 }
 .pull__quote__block span{
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.3em;
 }
 
@@ -434,8 +484,15 @@ a.window-sticker-content{
   .feature__hero__title{
     padding-top: 5rem;
   }
-  .input__combo input, .input__combo .btn{
-    height:40px;
+  .input__combo{
+    flex-direction: row;
+  }
+  .input__combo .is_expanded{
+    flex-grow: 1;
+  }
+  .input__combo .btn{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
   }
   .global__nav{
     justify-content: flex-start;
@@ -467,6 +524,26 @@ a.window-sticker-content{
   }
   .feature__credits .credits__branding{
     flex: 1;
+  }
+  .spotlight__tout{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* Pull quote  */
+  .pull__quote__block{
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    padding-left: 4rem;
+    background-image: url('./img/quote__graphic.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .pull__quote__block span{
+    font-size: 2rem;
+    line-height: 1.3em;
   }
 }
 
