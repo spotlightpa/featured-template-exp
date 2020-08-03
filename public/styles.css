@@ -67,7 +67,9 @@ p.drop__cap:first-letter{
   width:100%;
   z-index: 1001;
   display:flex;
-  justify-content: center;
+}
+.global__nav__content{
+    padding-left: 2rem;
 }
 .global__nav .spotlight__logo{
   height:40px;
@@ -99,8 +101,8 @@ p.drop__cap:first-letter{
   color: #ffcb05;
 }
 .global__footer__link__column, .global__footer__brand__column{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .global__footer h5{
   margin-bottom: 1rem;
@@ -134,6 +136,7 @@ p.drop__cap:first-letter{
   font-size: 1.25rem;
   color:rgb(219, 219, 219);
   border: 0;
+  margin-bottom: 1rem;
 }
 .form__field p{
   box-sizing: border-box;
@@ -625,8 +628,9 @@ a.window-sticker-content{
   .global__footer__link__column:nth-of-type(1) { order: 1; }
   .global__footer__link__column:nth-of-type(2) { order: 2; }
   .global__footer__link__column:nth-of-type(3) { order: 3; }
-  .spotlight__sticker__tout{
-    width:400px;
+  .global__footer__link__column, .global__footer__brand__column{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .spotlight__sticker__tout .btn{
     padding-top:.5rem;
@@ -636,6 +640,9 @@ a.window-sticker-content{
   }
 }
 @media (min-width: 1800px) {
+  .spotlight__sticker__tout{
+    width:400px;
+  }
   .feature__hero__text{
     width:70%;
     margin-top: 3rem;
@@ -667,13 +674,14 @@ a.window-sticker-content{
 
 .window-sticker-grid {
   display: grid;
-  grid-template-columns: 1rem auto;
-  grid-template-rows: 1rem auto;
+  grid-template-columns: auto 8px;
+  grid-template-rows: 12px auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-areas:
-    "x -"
-    "- box";
+    ". close"
+    "box ."
+    ;
 }
 
 .window-sticker-content {
@@ -711,12 +719,14 @@ a.window-sticker-content{
   color: white;
   font-family: system-ui, sans-serif;
   font-size: 1rem;
+  grid-area: close;
   line-height: 1.2;
   white-space: nowrap;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
   cursor: pointer;
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
+  justify-self: end;
 }
