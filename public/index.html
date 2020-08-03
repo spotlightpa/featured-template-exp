@@ -135,12 +135,36 @@
       <p>
         Interviews with two dozen students and administrators also revealed other harms against students of color that receive less public attention, such as faculty and coaches treating them more harshly than their white peers, universities underfunding their clubs, campus police intimidating them, and white counselors struggling to understand the impact of racism on their mental health.
       </p>
-      <div class="spotlight__tout spotlight__tout__block">
-        <h6 class="text__yellow">Donate</h6>
-        <p>
-          Spotlight PA provides essential, public-service journalism thanks to readers like you. Help us continue to cover the state's response to the coronavirus pandemic.
-        </p>
-        <button class="btn btn__yellow">Yes, I want to help</button>
+      <div class="spotlight__tout spotlight__tout__block" data-ga-form='{"eventCategory": "Newsletter signup", "eventAction": "External embed"}'>
+        <form
+          class="has-text-centered box"
+          action="https://spotlightpa.us3.list-manage.com/subscribe/post?u=4f6d92afd9b3de3ddb48714b9&amp;id=0466df5ab5"
+          method="post"
+          target="_blank"
+        >
+          <h6 class="text__yellow">Newsletter</h6>
+          <input type="hidden" name="group[26457]" value="1">
+          <p class="is-hidden" aria-hidden="true">
+            <label>
+              Don't fill this out if you're human:
+              <input type="text" name="b_4f6d92afd9b3de3ddb48714b9_0466df5ab5" tabindex="-1" value="">
+            </label>
+          </p>
+          <p>
+            Get every Spotlight PA story and the best investigative journalism from across Pa.
+          </p>
+          <div class="input__combo">
+            <div class="form__field is_expanded">
+              <p>
+                <input id="email-embed" class="input is-small" type="email" name="EMAIL" placeholder="Email address" required />
+                <span class="icon is_left"><i class="far fa-envelope"></i></span>
+              </p>
+            </div>
+            <div class="form__field">
+              <button class="btn btn__yellow" type="submit">Sign Up</button>
+            </div>
+          </div>
+        </form>
       </div>
       <p>
         Now, with the dual forces of the coronavirus pandemic - which has disproportionately affected communities of color - and a nationwide reckoning of systemic racism and police brutality, students said they're tired of universities responding to hate with platitudes. They want structural changes to long-standing inequities that take a mental, emotional, and academic toll.
@@ -388,37 +412,7 @@
       <p>
         "It's sad that it took [George Floyd's] death for people to be like, 'I get it,'" Calliste said. "But we have to use that momentum. When it comes to issues of race on campus, there is no more question of the relevance."
       </p>
-      <div class="spotlight__tout spotlight__tout__block" data-ga-form='{"eventCategory": "Newsletter signup", "eventAction": "External embed"}'>
-        <form
-          class="has-text-centered box"
-          action="https://spotlightpa.us3.list-manage.com/subscribe/post?u=4f6d92afd9b3de3ddb48714b9&amp;id=0466df5ab5"
-          method="post"
-          target="_blank"
-        >
-          <h6 class="text__yellow">Newsletter</h6>
-          <input type="hidden" name="group[26457]" value="1">
-          <p class="is-hidden" aria-hidden="true">
-            <label>
-              Don't fill this out if you're human:
-              <input type="text" name="b_4f6d92afd9b3de3ddb48714b9_0466df5ab5" tabindex="-1" value="">
-            </label>
-          </p>
-          <p>
-            Get every Spotlight PA story and the best investigative journalism from across Pa.
-          </p>
-          <div class="input__combo">
-            <div class="form__field is_expanded">
-              <p>
-                <input id="email-embed" class="input is-small" type="email" name="EMAIL" placeholder="Email address" required />
-                <span class="icon is_left"><i class="far fa-envelope"></i></span>
-              </p>
-            </div>
-            <div class="form__field">
-              <button class="btn btn__yellow" type="submit">Sign Up</button>
-            </div>
-          </div>
-        </form>
-      </div>
+
     </section>
     <section class="feature__credits">
       <div class="feature__credits__content">
@@ -606,16 +600,6 @@
     @open-sticky.window="show()"
   >
     <div class="window-sticker-grid">
-      <button
-        type="button"
-        class="close-btn"
-        aria-label="close"
-        @click="close"
-        x-ref="close"
-        tabindex="-1"
-      >
-        <i class="fa fa-times"></i>
-      </button>
       <a
         class="window-sticker-content"
         @click.capture="analytics($event)"
@@ -629,6 +613,16 @@
           <button class="btn btn__yellow">Yes, I want to help</button>
         </div>
       </a>
+      <button
+        type="button"
+        class="close-btn"
+        aria-label="close"
+        @click="close"
+        x-ref="close"
+        tabindex="-1"
+      >
+        <i class="fa fa-times"></i>
+      </button>
     </div>
   </section>
 </body>
