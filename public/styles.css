@@ -638,11 +638,11 @@ a.window-sticker-content{
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .spotlight__sticker__tout{
+    width:280px;
+  }
 }
 @media (min-width: 1800px) {
-  .spotlight__sticker__tout{
-    width:400px;
-  }
   .feature__hero__text{
     width:70%;
     margin-top: 3rem;
@@ -653,7 +653,9 @@ a.window-sticker-content{
   .feature__hero h6{
     font-size: 1.3rem;
   }
-
+  .spotlight__sticker__tout{
+    width:400px;
+  }
 }
 
 .window-sticker {
